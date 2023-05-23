@@ -1,9 +1,5 @@
 # Retours MCD
 
-## Rendu
-
-![](https://raw.githubusercontent.com/O-clock-tuteurs/bapteme-freelances/master/MCD/mcd_apprenant.png?token=GHSAT0AAAAAACCF3QGXQJUVTHZIFUXCWMRQZDNCMCA)
-
 ## Commentaire 
 
 Bon début de travail sur ce MCD. On retrouve bien les différents jeux de données mentionnés par le sujet (user, order, address et product). 
