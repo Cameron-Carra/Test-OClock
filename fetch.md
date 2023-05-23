@@ -4,13 +4,13 @@ Pour faire simple, `fetch` est une méthode qui permet d'effectuer des requêtes
 
 `fetch` effectue une `Request` et en reçoit une `Response`.
 De manière générale, la request va être constituée :
-- d'une URL (aussi appelé endpoint)
-- d'un type de méthode (POST, GET, ...) qui va définir le comportement de la requête (va-t-elle chercher des données, va-t-elle ajouter du contenu à une base de données, etc).
-- et de paramètres (pour préciser le comportement de la requête).
+- d'une **URL** (aussi appelé endpoint)
+- d'un **type de méthode** (POST, GET...) qui va définir le comportement de la requête (va-t-elle chercher des données, va-t-elle ajouter du contenu à une base de données, etc).
+- et d'un **body** (pour ajouter des paramètres à la requête).
 
 On a aussi beaucoup d'options que l'on peut ajouter, mais les trois au-dessus sont les principales.
 
-Ainsi, une request typique ressemblera à ça (telle que décrite dans la [documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) :
+Ainsi, une request typique ressemblera à ça (telle que décrite dans la [documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)) :
 
 ```js
 const response = await fetch("https://catfact.ninja/fact);
@@ -19,13 +19,12 @@ console.log(jsonData);
 ```
 
 Ce programme :
-- effectue une request avec fetch vers une API publique (cat fact" qui renvoie du contenu en format JSON)
+- effectue une **request** avec fetch vers une API publique ("Cat Fact" qui renvoie du contenu en format JSON)
 - store l'objet reçu dans la variable `response`
-- transforme la response en JSON afin de pouvoir être en lire le contenu
+- transforme la **response** en JSON afin de pouvoir être en lire le contenu
 - affiche le résultat avec `console.log`
 
-Par défaut, les requêtes fetch sont des requêtes "GET", ce qui signifie que le but est de récupérer de l'information. J'ai également parlé des requêtes "POST", dont le but est d'envoyer de l'information. Par exemple, si on fait un parallèle avec notre jeu de carte, on pourrait utiliser GET pour récupérer l'ensemble de nos cartes, mais POST pour appeler une route qui en créerait de nouvelles.
-
+Par défaut, les requêtes fetch sont des requêtes "GET", ce qui signifie que le but est de récupérer de l'information. J'ai également parlé des requêtes "POST", dont le but est d'envoyer de l'information. Par exemple, si l'on fait un parallèle avec notre jeu de carte, on pourrait utiliser GET pour récupérer l'ensemble de nos cartes, mais POST pour appeler une route qui en créerait de nouvelles.
 
 Une méthode fetch avec POST typique ressemblerait à ça :
 ```js
@@ -66,4 +65,4 @@ Encore une fois, il existe beaucoup d'autres méthodes et options, mais ce sont 
 
 Une dernière chose, fetch est une fonction **asynchrone**. Si vous vous ne vous souvenez pas de ce que c'est, les fonctions async mettent du temps à s'exécuter (une requête, par exemple, met du temps à se faire). Utiliser `await` permet **d'attendre que la requête se finisse pour continuer le déroulement du programme**.
 
-Pour une meilleur compréhension de cette méthode, je vous encourage vivement à tester les exemples donnés par la documentation par vous même (en utilisant par exemple l'api des cat facts ou la PokeApi)
+Pour une meilleure compréhension de cette méthode, je vous encourage vivement à tester les exemples donnés par la documentation (avec, par exemple, l'api des Cat Facts ou la PokeApi).
